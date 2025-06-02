@@ -8,6 +8,28 @@ body {
   transition: background 0.5s, color 0.5s;
 }
 
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Header & Navigation */
 header {
   display: flex;
   flex-direction: column;
@@ -15,6 +37,16 @@ header {
   padding: 20px;
   background: rgba(0, 140, 186, 0.8);
   color: white;
+  position: relative;
+  z-index: 10;
+}
+
+header .container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 nav ul {
@@ -31,7 +63,26 @@ nav a {
   font-weight: bold;
 }
 
-button {
+/* Hamburger Menu */
+.menu-toggle {
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Buttons */
+button,
+.btn {
   background-color: #008cba;
   color: white;
   padding: 10px 15px;
@@ -39,19 +90,20 @@ button {
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s;
+  text-decoration: none;
 }
 
-button:hover {
+button:hover,
+.btn:hover {
   background-color: #005f6b;
 }
 
-/* Section Styles */
+/* Base Sections */
 section {
   padding: 30px 20px;
   max-width: 900px;
   margin: auto;
 }
-
 h2 {
   margin-top: 0;
 }
@@ -60,14 +112,12 @@ h2 {
 .skills .skill {
   margin: 15px 0;
 }
-
 .progress {
   background: #ddd;
   height: 10px;
   border-radius: 5px;
   overflow: hidden;
 }
-
 .progress-bar {
   background: #008cba;
   height: 10px;
@@ -88,7 +138,6 @@ h2 {
   background-color: #fff;
   padding: 30px 20px;
 }
-
 .testimonial-container {
   display: flex;
   flex-direction: column;
@@ -96,16 +145,40 @@ h2 {
   max-width: 600px;
   margin: auto;
 }
-
 .testimonial p {
   font-style: italic;
   font-size: 1.1em;
   margin: 0;
 }
-
 .testimonial .author {
   color: #008cba;
   font-weight: bold;
+}
+
+/* Blog Section */
+#blog {
+  background: #f7f7f7;
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.post {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+.post h3 {
+  margin-top: 0;
+}
+.post p {
+  line-height: 1.5;
+  font-size: 1em;
 }
 
 /* Contact Form */
@@ -116,24 +189,36 @@ h2 {
   max-width: 500px;
   margin: auto;
 }
-
-#contact input, 
+#contact input,
 #contact textarea {
   padding: 10px;
   border: 1px solid #ccc;
-OAOAOA  border-radius: 4px;
-OAOAOAOAOAOA}
+  border-radius: 4px;
+}
 
-OAOAOA/* Footer */
-OAOAOAOAOAOAfooter {
+/* Footer & Social Media */
+footer {
   text-align: center;
   padding: 20px;
   background: #008cba;
-OAOAOA  color: white;
-OAOAOA}
-OAOAOAOAOAOAOAOAOA
+  color: white;
+}
+.social-media {
+  margin-top: 10px;
+}
+.social-media a {
+  color: white;
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.social-media a:hover {
+  color: #ddd;
+}
+
 /* Modal Styles */
-OAOAOA.modal {
+.modal {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -145,20 +230,26 @@ h2 {
   border-radius: 8px;
   display: none;
 }
-
+.modal.show {
+  display: block;
+  animation: fadeIn 0.3s ease-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 .modal-content {
   position: relative;
 }
-
 .modal-content .close {
   position: absolute;
   top: 10px;
   right: 10px;
-OAOAOA  cursor: pointer;
-OAOAOA  font-size: 24px;
-OAOAOAOAOAOA}
+  cursor: pointer;
+  font-size: 24px;
+}
 
-OAOAOA/* Back-to-top Button */
+/* Back-to-top Button */
 .back-to-top {
   position: fixed;
   bottom: 20px;
@@ -173,35 +264,54 @@ h2 {
   display: none;
 }
 
-/* Dark Mode */
-.dark-mode {
-  background: #222;
-  color: #f4f4f4;
-}
-
-.dark-mode header {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.dark-mode nav a {
-  color: #f4f4f4;
-}
-
 /* Scroll Reveal Animations */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
 }
-
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Responsive */
+/* Dark Mode */
+.dark-mode {
+  background: #222;
+  color: #f4f4f4;
+}
+.dark-mode header {
+  background: rgba(0, 0, 0, 0.8);
+}
+.dark-mode nav a {
+  color: #f4f4f4;
+}
+.dark-mode nav ul {
+  background: rgba(0, 0, 0, 0.8);
+}
+.dark-mode .btn {
+  background-color: #444;
+}
+.dark-mode .btn:hover {
+  background-color: #666;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
+    width: 100%;
+    background: rgba(0, 140, 186, 0.9);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 15px 0;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  /* When navigation is active (toggled by JS), display the menu */
+  nav.active ul {
+    display: flex;
   }
 }

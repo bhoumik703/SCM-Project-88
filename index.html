@@ -2,98 +2,157 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="description" content="Deekshith's Portfolio – A web developer with a passion for interactive and user-centered design." />
+  <meta name="keywords" content="portfolio, web developer, interactive design, projects, testimonials, blog" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <title>Deekshith's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">Loading...</div>
+
   <header class="reveal">
-    <h1>Welcome to My Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <button id="toggleDarkMode">Dark Mode</button>
+    <div class="container">
+      <h1>Welcome to My Portfolio</h1>
+      <!-- Hamburger Menu for Mobile -->
+      <button class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="toggleDarkMode">Dark Mode</button>
+        <a href="resume.pdf" class="btn" id="downloadResume" download>Download Resume</a>
+      </div>
+    </div>
   </header>
 
-  <section id="about" class="reveal">
-    <h2>About Me</h2>
-    <p>Web developer with a passion for interactive design.</p>
-    <div class="skills">
-      <h3>Skills</h3>
-      <div class="skill">
-        <p>HTML</p>
-        <div class="progress">
-          <div class="progress-bar" style="width: 90%;"></div>
+  <main>
+    <section id="about" class="reveal">
+      <h2>About Me</h2>
+      <p>
+        I am a web developer with a passion for interactive, user-centered design. I blend creativity with technology to build engaging, responsive, and accessible web platforms.
+      </p>
+      <div class="skills">
+        <h3>Skills</h3>
+        <div class="skill">
+          <p>HTML</p>
+          <div class="progress">
+            <div class="progress-bar" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <p>CSS</p>
+          <div class="progress">
+            <div class="progress-bar" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <p>JavaScript</p>
+          <div class="progress">
+            <div class="progress-bar" style="width: 75%;"></div>
+          </div>
         </div>
       </div>
-      <div class="skill">
-        <p>CSS</p>
-        <div class="progress">
-          <div class="progress-bar" style="width: 80%;"></div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <h2>My Projects</h2>
+      <div class="project">
+        <h3>Dynamic Portfolio</h3>
+        <p>A visually engaging portfolio site with interactive elements, animations, and dynamic content.</p>
+        <button class="viewDetails">View Details</button>
+      </div>
+      <!-- Example of an additional project -->
+      <div class="project">
+        <h3>Interactive Web App</h3>
+        <p>A full-fledged web application featuring RESTful APIs, real-time data, and progressive web app (PWA) capabilities.</p>
+        <button class="viewDetails">View Details</button>
+      </div>
+    </section>
+
+    <section id="testimonials" class="reveal">
+      <h2>Testimonials</h2>
+      <div class="testimonial-container">
+        <div class="testimonial">
+          <p>
+            “Great work and exceptional attention to detail!” 
+            <span class="author">– Client A</span>
+          </p>
+        </div>
+        <div class="testimonial">
+          <p>
+            “Highly recommended for interactive designs.” 
+            <span class="author">– Client B</span>
+          </p>
+        </div>
+        <div class="testimonial">
+          <p>
+            “The portfolio is both creative and professional.” 
+            <span class="author">– Client C</span>
+          </p>
         </div>
       </div>
-      <div class="skill">
-        <p>JavaScript</p>
-        <div class="progress">
-          <div class="progress-bar" style="width: 75%;"></div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects" class="reveal">
-    <h2>My Projects</h2>
-    <div class="project">
-      <h3>Dynamic Portfolio</h3>
-      <p>A visually engaging portfolio site with interactive elements.</p>
-      <button class="viewDetails">View Details</button>
-    </div>
-  </section>
+    <section id="blog" class="reveal">
+      <h2>Blog</h2>
+      <div class="blog-posts">
+        <article class="post">
+          <h3>Embracing Modern Web Design</h3>
+          <p>
+            An exploration of modern trends in web design that drive user engagement and interaction.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </article>
+        <article class="post">
+          <h3>Accessibility in Web Development</h3>
+          <p>
+            Insights into how to build inclusive web applications with improved usability for all.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </article>
+        <article class="post">
+          <h3>Performance Optimization Techniques</h3>
+          <p>
+            A guide to enhancing web performance, reducing load times, and boosting user satisfaction.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </article>
+      </div>
+    </section>
 
-  <section id="testimonials" class="reveal">
-    <h2>Testimonials</h2>
-    <div class="testimonial-container">
-      <div class="testimonial">
-        <p>
-          “Great work and exceptional attention to detail!” 
-          <span class="author">– Client A</span>
-        </p>
-      </div>
-      <div class="testimonial">
-        <p>
-          “Highly recommended for interactive designs.” 
-          <span class="author">– Client B</span>
-        </p>
-      </div>
-      <div class="testimonial">
-        <p>
-          “The portfolio is both creative and professional.” 
-          <span class="author">– Client C</span>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="reveal">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required />
-      <label for="email">Email:</label>
-      <input type="email" id="email" required />
-      <label for="message">Message:</label>
-      <textarea id="message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    <section id="contact" class="reveal">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+        
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
 
   <footer class="reveal">
     <p>© 2025 Deekshith</p>
+    <div class="social-media">
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+    </div>
   </footer>
 
   <!-- Modal for project demos -->
@@ -101,7 +160,7 @@
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Project Details</h2>
-      <p>Here you can explore more details about my project work.</p>
+      <p>Explore more detailed information and screenshots of my project work here. Content is updated regularly.</p>
     </div>
   </div>
 

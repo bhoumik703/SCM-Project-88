@@ -1,0 +1,207 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #f4f4f4, #e0e0e0);
+  color: #333;
+  margin: 0;
+  scroll-behavior: smooth;
+  transition: background 0.5s, color 0.5s;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 140, 186, 0.8);
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 10px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+button {
+  background-color: #008cba;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #005f6b;
+}
+
+/* Section Styles */
+section {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* Skills */
+.skills .skill {
+  margin: 15px 0;
+}
+
+.progress {
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: #008cba;
+  height: 10px;
+  border-radius: 5px;
+}
+
+/* Projects */
+.project {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Testimonials */
+#testimonials {
+  background-color: #fff;
+  padding: 30px 20px;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.testimonial p {
+  font-style: italic;
+  font-size: 1.1em;
+  margin: 0;
+}
+
+.testimonial .author {
+  color: #008cba;
+  font-weight: bold;
+}
+
+/* Contact Form */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: auto;
+}
+
+#contact input, 
+#contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+OAOAOA  border-radius: 4px;
+OAOAOAOAOAOA}
+
+OAOAOA/* Footer */
+OAOAOAOAOAOAfooter {
+  text-align: center;
+  padding: 20px;
+  background: #008cba;
+OAOAOA  color: white;
+OAOAOA}
+OAOAOAOAOAOAOAOAOA
+/* Modal Styles */
+OAOAOA.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 8px;
+  display: none;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+OAOAOA  cursor: pointer;
+OAOAOA  font-size: 24px;
+OAOAOAOAOAOA}
+
+OAOAOA/* Back-to-top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: #222;
+  color: #f4f4f4;
+}
+
+.dark-mode header {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.dark-mode nav a {
+  color: #f4f4f4;
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+}

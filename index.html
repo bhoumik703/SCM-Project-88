@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="reveal">
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="toggleDarkMode">Dark Mode</button>
+  </header>
+
+  <section id="about" class="reveal">
+    <h2>About Me</h2>
+    <p>Web developer with a passion for interactive design.</p>
+    <div class="skills">
+      <h3>Skills</h3>
+      <div class="skill">
+        <p>HTML</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 90%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>CSS</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 80%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>JavaScript</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 75%;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="reveal">
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>Dynamic Portfolio</h3>
+      <p>A visually engaging portfolio site with interactive elements.</p>
+      <button class="viewDetails">View Details</button>
+    </div>
+  </section>
+
+  <section id="testimonials" class="reveal">
+    <h2>Testimonials</h2>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p>
+          “Great work and exceptional attention to detail!” 
+          <span class="author">– Client A</span>
+        </p>
+      </div>
+      <div class="testimonial">
+        <p>
+          “Highly recommended for interactive designs.” 
+          <span class="author">– Client B</span>
+        </p>
+      </div>
+      <div class="testimonial">
+        <p>
+          “The portfolio is both creative and professional.” 
+          <span class="author">– Client C</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+      <label for="message">Message:</label>
+      <textarea id="message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="reveal">
+    <p>© 2025 Deekshith</p>
+  </footer>
+
+  <!-- Modal for project demos -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Project Details</h2>
+      <p>Here you can explore more details about my project work.</p>
+    </div>
+  </div>
+
+  <!-- Back-to-top button -->
+  <button id="backToTop" class="back-to-top">⬆️ Top</button>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
